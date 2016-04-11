@@ -13,3 +13,7 @@ Just type this command on your terminal window:
 You can find your google API key inside `Credentials` section in your [Google Developers Console](https://console.developers.google.com/).
 
 On the other hand, you can find `YOUR_REGISTRATION_ID` once your application performed a successfully subscription to [Google Cloud Messaging](https://developers.google.com/cloud-messaging/).
+
+Example:
+
+    curl --header "Authorization: key=AIzaSyAA_8-mBMNnu-zz45ciOcoUXARvEnVtTWs" --header "Content-Type: application/json" https://android.googleapis.com/gcm/send -d "{\"registration_ids\":[\"c9UlUxcBr78:APA91bEzt0Y8Cn5jYuoklAB7teRju0h_Q8fvXQ9ybRn4uzfn27cJqGCjUgaZFJ-F53OhhAYN-C037HWzwj7y6b-zk3wwO4mguwFevHLAKR7Gt8QAJn0Hk2wJ-WSIgIXU6ZB1DmArNyCJ\"]}"
