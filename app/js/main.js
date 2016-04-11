@@ -4,6 +4,11 @@ if('serviceWorker' in navigator) {
     console.log('Service worker is supported');
     navigator.serviceWorker.register('sw.js').then(function(reg){
         console.log('Service worker loaded \uD83D\uDE0E', reg);
+        reg.pushManager.subscribe({
+            "userVisibleOnly" : true
+        }).then(function( sub ) {
+            console.log('endpoint', sub.endpoint);
+        });
     }).catch(function(err) {
         console.log('\uD83D\uDE1E', err)
     });
