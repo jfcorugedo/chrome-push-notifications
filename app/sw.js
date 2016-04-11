@@ -15,5 +15,12 @@ self.addEventListener('activate', function(event) {
 
 self.addEventListener('push', function(event) {
     console.log('push message received', event);
-    //TODO
+    var title = 'Push message';
+    // The method waitUntil takes a promise and it does't end until that promise is resolved
+    event.waitUntil(
+        self.registration.showNotification(title, {
+            body: 'Hey! You have a new notification',
+            icon: 'images/icon.png',
+            tag: 'simple-notification' + Math.random()
+        }));
 });
